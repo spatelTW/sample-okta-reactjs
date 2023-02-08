@@ -12,9 +12,11 @@
 
 import { useOktaAuth } from '@okta/okta-react';
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button, Header } from 'semantic-ui-react';
 
 const Home = () => {
+  const history = useHistory();
   const { authState, oktaAuth } = useOktaAuth();
   const [userInfo, setUserInfo] = useState(null);
 
@@ -114,6 +116,16 @@ const Home = () => {
           <Button id="login-button" primary onClick={login}>Login</Button>
         </div>
         )}
+
+        {authState.isAuthenticated
+            && (
+                <div>
+                  <Button
+                      onClick={()=>history.push(`/jsp`)}>
+                    JspPage
+                  </Button>
+                </div>
+            )}
 
       </div>
     </div>

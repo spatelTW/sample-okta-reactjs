@@ -6,6 +6,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path';
 import getEnvModule from './env'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 getEnvModule().setEnvironmentVarsFromTestEnv(__dirname);
 
