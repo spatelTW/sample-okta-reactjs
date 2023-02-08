@@ -23,6 +23,7 @@ import Navbar from './Navbar';
 import Profile from './Profile';
 import CorsErrorModal from './CorsErrorModal';
 import AuthRequiredModal from './AuthRequiredModal';
+import {JspView} from "./JspView";
 
 const oktaAuth = new OktaAuth(config.oidc);
 
@@ -66,6 +67,7 @@ const App = () => {
           <Route path="/login/callback" component={LoginCallback} />
           <SecureRoute path="/messages" component={Messages} />
           <SecureRoute path="/profile" component={Profile} />
+          <SecureRoute path="/jsp" component={JspView} />
         </Switch>
       </Container>
     </Security>
