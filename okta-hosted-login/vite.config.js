@@ -30,7 +30,7 @@ const env = {};
 
 // https://vitejs.dev/config/
 export default defineConfig(( { command } ) => {
-  const includeSampleBaseName = command === 'build' && !process.env.STANDALONE_SAMPLE_BUILD;
+  const includeSampleBaseName = command === 'build' && !1;
   return {
     base: includeSampleBaseName ? '/okta-hosted-login/' : '/',
     plugins: [react()],
