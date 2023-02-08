@@ -15,7 +15,6 @@ okta-hosted-login/src/.samples.config.js--
 .samples.config.js--
 testenv
 .yalc
-.env
 .idea/
 yalc.lock
 .eslintcache
